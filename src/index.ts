@@ -21,7 +21,7 @@ export default function (opts: NodePolyfillsOptions = {}) {
   const dirs = new Map<string, string>();
   const resolver = builtinsResolver(opts);
   return {
-    name: 'node-polyfills',
+    name: 'gumjs-node-polyfills',
     resolveId(importee: string, importer: string) {
       if (importee === DIRNAME_PATH) {
         const id = getRandomId();
@@ -51,5 +51,5 @@ function getRandomId() {
 }
 
 const GLOBAL_PATH = require.resolve('../polyfills/global.js');
-const DIRNAME_PATH = '\0node-polyfills:dirname';
-const FILENAME_PATH = '\0node-polyfills:filename';
+const DIRNAME_PATH = '\0gumjs-node-polyfills:dirname';
+const FILENAME_PATH = '\0gumjs-node-polyfills:filename';

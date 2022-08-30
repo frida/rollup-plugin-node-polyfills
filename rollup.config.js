@@ -16,6 +16,7 @@ export default {
 			format: 'cjs',
 			file: 'dist/index.js',
 			preferConst: true,
+			exports: 'default',
 		}
 	]
 };
