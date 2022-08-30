@@ -1,4 +1,5 @@
 // @ts-ignore
+import type { TransformHook } from '@rollup';
 import inject from '@rollup/plugin-inject';
 import { builtinsResolver, NodePolyfillsOptions } from './modules';
 import { dirname, relative } from 'path';
@@ -41,7 +42,7 @@ export default function (opts: NodePolyfillsOptions = {}) {
       }
     },
     transform(code: string, id: string)  {
-      return injectPlugin.transform.call(this, code, id);
+      return (injectPlugin.transform! as TransformHook).call(this, code, id);
     }
   };
 }
