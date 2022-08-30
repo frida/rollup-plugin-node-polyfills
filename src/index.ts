@@ -1,11 +1,11 @@
 // @ts-ignore
-import type { TransformHook } from '@rollup';
+import type { Plugin, TransformHook } from '@rollup';
 import inject from '@rollup/plugin-inject';
 import { builtinsResolver, NodePolyfillsOptions } from './modules';
 import { dirname, relative } from 'path';
 import { randomBytes } from 'crypto';
 
-export default function (opts: NodePolyfillsOptions = {}) {
+export default function (opts: NodePolyfillsOptions = {}): Plugin {
   const injectPlugin = inject({
     include: opts.include === undefined ? 'node_modules/**/*.js' : undefined,
     exclude: opts.exclude,
