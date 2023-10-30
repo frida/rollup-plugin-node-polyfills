@@ -13,6 +13,7 @@ export function builtinsResolver(opts: NodePolyfillsOptions) {
   libs.set('assert', require.resolve('@frida/assert'));
   libs.set('base64-js', require.resolve('@frida/base64-js'));
   libs.set('buffer', require.resolve('@frida/buffer'));
+  libs.set('crypto', require.resolve('@frida/crypto'));
   libs.set('diagnostics_channel', require.resolve('@frida/diagnostics_channel'));
   libs.set('events', require.resolve('@frida/events'));
   libs.set('fs', require.resolve('frida-fs'));
@@ -55,7 +56,6 @@ export function builtinsResolver(opts: NodePolyfillsOptions) {
   libs.set('readline', EMPTY_PATH);
   libs.set('repl', EMPTY_PATH);
   libs.set('tls', EMPTY_PATH);
-  libs.set('crypto', EMPTY_PATH);
 
   return (importee: string) => {
     if (importee && importee.slice(-1) === '/') {
