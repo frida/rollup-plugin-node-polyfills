@@ -8,7 +8,7 @@
     "pretest": "npm run build",
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "npm run build:constants && npm run build:bundlers",
-    "build:bundlers": "tsc -p . && rollup -c",
+    "build:bundlers": "tsc -p . && rollup -c --bundleConfigAsCjs",
     "build:constants": "node scripts/build-constants.js"
   },
   "files": [
@@ -45,12 +45,12 @@
     "@frida/url": "^1.0.2",
     "@frida/util": "^1.0.3",
     "@frida/vm": "^2.0.0",
-    "@rollup/plugin-inject": "^4.0.4",
+    "@rollup/plugin-inject": "^5.0.5",
     "frida-fs": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^18.7.14",
-    "rollup": "^2.78.1",
+    "rollup": "^4.1.5",
     "typescript": "^4.8.2"
   },
   "repository": {
