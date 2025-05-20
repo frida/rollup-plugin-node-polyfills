@@ -27,13 +27,13 @@
     "@frida/crypto": "^1.0.1",
     "@frida/diagnostics_channel": "^1.0.0",
     "@frida/events": "^4.0.4",
-    "@frida/http": "^4.0.1",
+    "@frida/http": "^4.0.2",
     "@frida/http-parser-js": "^1.0.0",
     "@frida/https": "^1.0.0",
     "@frida/ieee754": "^2.0.2",
-    "@frida/net": "^4.0.0",
+    "@frida/net": "^4.0.2",
     "@frida/os": "^1.0.2",
-    "@frida/path": "^2.0.2",
+    "@frida/path": "^2.0.3",
     "@frida/process": "^1.2.1",
     "@frida/punycode": "^3.0.0",
     "@frida/querystring": "^1.0.0",
@@ -47,12 +47,12 @@
     "@frida/util": "^1.0.3",
     "@frida/vm": "^2.0.0",
     "@rollup/plugin-inject": "^5.0.5",
-    "frida-fs": "^5.2.1"
+    "frida-fs": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.7.14",
-    "rollup": "^4.1.5",
-    "typescript": "^4.8.2"
+    "@types/node": "^22.15.20",
+    "rollup": "^4.41.0",
+    "typescript": "^5.8.3"
   },
   "repository": {
     "type": "git",
