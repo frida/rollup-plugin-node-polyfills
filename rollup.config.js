@@ -10,13 +10,17 @@ export default {
 		{
 			format: 'es',
 			file: 'dist/index.mjs',
-			preferConst: true,
+			generatedCode: {
+				constBindings: true,
+			},
 		},
 		{
 			format: 'cjs',
 			file: 'dist/index.js',
-			preferConst: true,
 			exports: 'default',
+			generatedCode: {
+				constBindings: true,
+			},
 		}
 	]
 };
