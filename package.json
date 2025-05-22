@@ -47,7 +47,7 @@
     "@frida/util": "^1.0.3",
     "@frida/vm": "^2.0.0",
     "@rollup/plugin-inject": "^5.0.5",
-    "frida-fs": "^6.0.0"
+    "frida-fs": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.20",
